@@ -15,6 +15,7 @@
    export const getAllBrands = async (query: {search?: string;page?: number;limit?: number;isActive?: boolean}) => {
 
           const {search, page = 1, limit = 10, isActive} = query;
+          const where: any = {};
           return await prisma.brand.findMany()
    }
 
